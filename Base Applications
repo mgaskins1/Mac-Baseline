@@ -14,24 +14,6 @@ else
     brew update
 fi
 
-# Move git config files to home folder
-cp -f ../dotfiles/gitconfig ~/.gitconfig
-cp -f ../dotfiles/gitignore_global ~/.gitignore_global
-
-# Install Mac App store CLI to install Memory Clean 2
-brew install mas
-
-# Install Memory Clean 2
-# Retrieve ID by running "mas search 'Memory Clean 2'"
-mas signin brian@brianalbers.com
-mas install 1114591412
-
-# Install Disk Doctor: System Cleaner
-mas install 455970963
-
-# Install BetterSnapTool (1.8)
-mas install 417375580
-cp ../dotfiles/com.hegenberg.BetterSnapTool.plist ~/Library/Preferences
 
 # Install Apple Office Applications
 mas install 409203825  # Numbers
@@ -53,10 +35,6 @@ brew install m-cli
 
 # Install openssl
 brew install openssl
-
-# Install iStat menu bar - se
-brew cask install istat-menus
-open /Applications/iStat\ Menus.app
 
 # Install Homebrew Cask
 brew tap caskroom/cask
