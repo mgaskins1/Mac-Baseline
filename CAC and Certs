@@ -35,6 +35,10 @@ defaults write com.citrix.receiver.nomas PKCS11ModulePath -string /Library/CACKe
 defaults write com.citrix.receiver.nomas PKCS11ModuleEnabled YES
 echo "Done Installing Citrix Receiver"
 
+sudo defaults write /Library/Preferences/com.apple.security.smartcard DisabledTokens -array com.apple.CryptoTokenKit.pivtoken
+
+sudo defaults write /Library/Preferences/com.apple.security.smartcard DisabledTokens -array && sudo defaults write /Library/Preferences/com.apple.security.smartcard EnabledTokens -array com.apple.CryptoTokenKit.pivtoken
+
 # Cleanup artifacts
 echo "Removing Artifacts"
 rm -f AllCerts.zip
