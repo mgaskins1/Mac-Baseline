@@ -4,6 +4,10 @@
 # https://github.com/Stratus3D/dotfiles
 # https://github.com/herrbischoff/awesome-macos-command-line#transparency
 
+brew cask install iterm2
+
+brew install zsh
+
 # Install or update Home-brew
 which -s brew
 if [[ $? != 0 ]] ; then
